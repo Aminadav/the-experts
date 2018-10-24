@@ -80,7 +80,7 @@ https://www.facebook.com/groups/1828460090613986/
 https://www.facebook.com/groups/306657883448830/
 https://www.facebook.com/groups/241353919874171/
 https://www.facebook.com/groups/758367731165156/
-https://www.facebook.com/groups/452541335271094/admin_activities/?notif_id=1540242126890812&notif_t=group_admin
+https://www.facebook.com/groups/452541335271094/
 https://www.facebook.com/groups/1954300584639481/
 https://www.facebook.com/groups/1127681987387770/
 https://www.facebook.com/groups/1877038795749321/
