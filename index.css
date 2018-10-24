@@ -1,96 +1,189 @@
-.description {	
-    font-weight: 300;
-    font-size: 32px;
-    margin-bottom: 32px;
+.description {
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 32px;
 }
 
 .spacer {
-	height:150px
+  height: 150px;
 }
-.bootom,.bottom a {
-	color:rgba(0,0,0,0.7)
+.bootom,
+.bottom a {
+  color: rgba(0, 0, 0, 0.7);
 }
 .bottom a:hover {
-	text-decoration:underline
+  text-decoration: underline;
 }
 
-		.fb-group-manual:hover {
-			color:rgba(0,0,0,1);
-			background-color:cadetblue
-		}
-		.fb-group-manual {
-			border: 1px solid black;
-			margin: 5px;
-			padding: 5px;
-			display: inline-block;
-			width: 40%;
-			text-align: right;
-			padding: 20px;
-			cursor: pointer;
-			box-shadow: 3px 3px 6px 0px #0000005c;
-			color: inherit;
-			text-decoration: none;
-		}
+.fb-group-manual:hover {
+  color: rgba(0, 0, 0, 1);
+  background-color: cadetblue;
+}
+.fb-group-manual {
+  vertical-align: top;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+  display: inline-block;
+  width: 40%;
+  text-align: right;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px 6px 0px #0000005c;
+  color: inherit;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@media (max-width: 400px) {
+  .fb-group-manual {
+    width: 100%;
+  }
+}
 
 .overflow {
-	    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #000000d9;
-    z-index: 3;
-    top: 0px;
-    left: 0px;
-		display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000000d9;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  display: none;
 }
 
-		.ifr {
-			border:none;
-			width: 360px;
-			height: 380px;
-			background: white;
-			z-index: 3;
-			position: fixed;
-			top: 50%;
-			left: 50%;
-			margin-left: -150px;
-			margin-top: -150px;
-		}
+.close {
+  position: absolute;
+  top: -30px;
+  color: white;
+  font-size: 21px;
+  right: 10px;
+  cursor: pointer;
+}
 
-		.content {
-			background: white;
-			padding: 30px;
-		}
+.ifr {
+  border: none;
+  width: 360px;
+  height: 380px;
+  background: white;
+  z-index: 3;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
 
-		.over-fixed {
-			position: relative;
-			z-index: 2
-		}
+.ifr iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-		.push-bottom {
-			height: 100%
-		}
+@media (max-width: 400px) {
+  .ifr {
+    width: 100%;
+    margin-left: unset;
+    left: 0px;
+  }
+}
 
-		.cover {
-			z-index: 1;
-			background-image: url('./cover.png');
-			background-size: cover;
-			background-position: center center;
-			width: 100%;
-			height: 100%;
-			position: fixed
-		}
+.content {
+  background: white;
+  padding: 30px;
+}
 
-		.fb-group {
-			vertical-align: top;
-			padding: 5px;
-		}
+.over-fixed {
+  position: relative;
+  z-index: 2;
+}
 
-		body {
-			color:rgba(0,0,0,0.9);
-			text-align: center;
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0px;
-			padding: 0px;
-			direction: rtl;
-			background-color: #ddd
-		}
+.push-bottom {
+  height: 85%;
+}
+
+.cover {
+  z-index: 1;
+  background-image: url("./cover.png");
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.fb-group {
+  vertical-align: top;
+  padding: 5px;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  direction: rtl;
+  background-color: #ddd;
+}
+
+.category {
+  color: rgba(0, 0, 0, 0.9);
+  display: inline-block;
+  /* border: 1px solid gray; */
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  text-align: right;
+  width: 40%;
+  box-shadow: 1px 1px 4px 0px #000000ba;
+}
+@media (max-width: 400px) {
+  .category {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.categories {
+}
+
+.filter {
+  margin-bottom: 15px;
+  cursor: pointer;
+  color: #0098ff;
+}
+.filter img {
+  width: 20px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.filter-button {
+  display: inline-block;
+  padding: 10px 10px 10px 30px;
+  border: 1px solid #0397f7;
+}
+
+.category {
+  direction: ltr;
+}
+.name {
+  display: inline-block;
+  direction: rtl;
+}
+
+.count {
+  display: inline;
+  float: left;
+}
+
+.group-descriptipn {
+  margin-top: 10px;
+  /* font-style: italic; */
+  color: gray;
+  font-size: 13px;
+}
+.fb-group-manual:hover .group-descriptipn {
+  color: #eee;
+}
