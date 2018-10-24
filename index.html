@@ -26,18 +26,26 @@
 
 <body>
 	<div id="fb-root"></div>
-	<script>(function (d, s, id) {
+	<!-- <script>(function (d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
 			js.src = 'https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v3.1&appId=180436542884537&autoLogAppEvents=1';
 			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script> -->
+
+	<!-- Load Facebook SDK for JavaScript -->
+	<script>(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/he_IL/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-	<script>
-		document.addEventListener('load', function () {
-			alert('loaded')
-		})
-	</script>
+
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat" attribution=setup_tool page_id="1882183915163682" theme_color="#0084ff">
+	</div>
 
 
 	<!-- Your customer chat code -->
