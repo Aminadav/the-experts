@@ -233,7 +233,7 @@ document.write(`<div class="description">
 			בחר את כל קבוצות המומחים אליהם ברצונך להצטרף
 		</div>
 		<div class="expert">
-		👔 המלצה המומחה: 
+		👔 המלצת המומחה: 
 		בבחירת הקבוצות מומלץ לשלב בין תחומים בהם
 		יש לך נסיון והינך יכול לתרום, לבין תחומים שבהם הינך חסר נסיון ומעוניינ/ת להתייעץ.
 		</div>`);
@@ -326,7 +326,6 @@ document
   .getElementsByClassName("filter")[0]
   .addEventListener("click", clickFilters);
 function clickFilters() {
-  console.log("click");
   var categories = document.getElementsByClassName("categories")[0];
   a = categories.style.display;
   categories.style.display =
