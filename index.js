@@ -232,10 +232,20 @@ categoriesForSort.sort((a, b) => {
 document.write(`<div class="description">
 			בחר את כל קבוצות המומחים אליהם ברצונך להצטרף
 		</div>
-		`);
+		<div class="expert">
+		👔 המלצה המומחה: 
+		בבחירת הקבוצות מומלץ לשלב בין קבוצות בהם
+		יש לך נסיון והינך יכול לתרום, לבין קבוצות שבהם הינך חסר נסיון ומעוניינ/ת ללמוד
+		</div>`);
 
 document.write(`
-	<div class="filter"><div class="filter-button"><img src="filter.png">סינון</img></div></div>
+	<div class="filter">
+	<div class="filter-button"><img src="filter.png">סינון</img></div>
+	</div>
+	<br/>
+	<span class="filter-now"></span>
+	<span class="clear-filters" onclick="javascript:clearFilters()"></span>
+	
 `);
 document.write('<div class="categories" style="display:none">');
 categoriesForSort.forEach(i => {
@@ -252,7 +262,7 @@ document.write(`<div class="groups"><br/>`);
 for (i = 0; i < links.length; i++) {
   var currentLink = links[i];
   document.write(`
-			<a class="fb-group-manual" title="${descriptions[i] || "&nbsp;"}" category="${
+			<a class="fb-group-manual" title="${descriptions[i] || ""}" category="${
     categories[i]
   }" href="javascript:click(${i})">
 			<div class="fb-group-name" >${names[i]}</div>
@@ -265,16 +275,25 @@ for (i = 0; i < links.length; i++) {
 document.write("</div>");
 
 function clickCategory(x) {
-  document.getElementsByClassName("groups")[0].scrollIntoView();
+  document.getElementsByClassName("groups")[0].scrollIntoViewIfNeeded();
   var allGroups = document.getElementsByClassName("fb-group-manual");
   for (var i = 0; i < allGroups.length; i++) {
-    if (allGroups[i].getAttribute("category") == x) {
+    if (!x || allGroups[i].getAttribute("category") == x) {
       allGroups[i].style.display = "inline-block";
     } else {
       allGroups[i].style.display = "none";
     }
   }
-  clickFilters();
+  document.getElementsByClassName("filter-now")[0].innerHTML = x || "";
+  document.getElementsByClassName("clear-filters")[0].innerHTML = x
+    ? "הסר"
+    : "";
+  if (x) {
+    clickFilters();
+  }
+}
+function clearFilters() {
+  clickCategory();
 }
 
 document.body.addEventListener("click", function() {
