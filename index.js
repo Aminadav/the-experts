@@ -234,8 +234,8 @@ document.write(`<div class="description">
 		</div>
 		<div class="expert">
 		👔 המלצה המומחה: 
-		בבחירת הקבוצות מומלץ לשלב בין קבוצות בהם
-		יש לך נסיון והינך יכול לתרום, לבין קבוצות שבהם הינך חסר נסיון ומעוניינ/ת ללמוד
+		בבחירת הקבוצות מומלץ לשלב בין תחומים בהם
+		יש לך נסיון והינך יכול לתרום, לבין תחומים שבהם הינך חסר נסיון ומעוניינ/ת להתייעץ.
 		</div>`);
 
 document.write(`
